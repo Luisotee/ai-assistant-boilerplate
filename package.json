@@ -4,21 +4,21 @@
   "description": "Unified boilerplate for AI assistants with various client integrations",
   "scripts": {
     "start:ai": "cd ai && poetry run start",
-    "start:whatsapp": "cd clients/whatsapp && npm run start",
+    "start:whatsapp": "cd clients/whatsapp && yarn start",
     "dev:ai": "cd ai && poetry run uvicorn ai_assistant.main:app --reload --host 0.0.0.0 --port 40000",
-    "dev:whatsapp": "cd clients/whatsapp && npm run dev",
-    "setup": "npm run setup:submodules && npm run setup:ai && npm run setup:whatsapp",
-    "setup:submodules": "git submodule update --init --recursive",
+    "dev:whatsapp": "cd clients/whatsapp && yarn dev",
+    "setup": "yarn setup:submodules && yarn setup:ai && yarn setup:whatsapp",
+    "setup:submodules": "git submodule update --init --recursive && yarn checkout:main",
+    "checkout:main": "cd ai && git checkout main && cd ../clients && git checkout main",
     "update:submodules": "git submodule update --remote",
     "setup:ai": "cd ai && poetry install",
-    "setup:whatsapp": "cd clients/whatsapp && npm install",
-    "build:whatsapp": "cd clients/whatsapp && npm run build"
+    "setup:whatsapp": "cd clients/whatsapp && yarn install"
   },
   "author": "",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/YOUR_USERNAME/ai-assistant-boilerplate.git"
+    "url": "https://github.com/Luisotee/ai-assistant-boilerplate"
   },
   "submodules": {
     "ai": "https://github.com/Luisotee/smolagents-ai-boilerplate",
