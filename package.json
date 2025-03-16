@@ -22,6 +22,10 @@
   },
   "submodules": {
     "ai": "https://github.com/Luisotee/smolagents-ai-boilerplate",
-    "clients": "https://github.com/Luisotee/llm-clients-boilerplate"
+    "clients": "https://github.com/Luisotee/llm-clients-boilerplate",
+    "supabase": "https://github.com/Luisotee/ai-assistant-supabase-boilerplate"
+  },
+  "devDependencies": {
+    "supabase": "^2.19.7"
   }
 }

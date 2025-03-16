@@ -6,3 +6,7 @@
     path = clients
     url = https://github.com/Luisotee/llm-clients-boilerplate
 	branch = main
+[submodule "supabase"]
+    path = supabase
+    url = https://github.com/Luisotee/ai-assistant-supabase-boilerplate
+    branch = main
