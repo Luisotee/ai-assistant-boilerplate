@@ -1,0 +1,6 @@
+[submodule "ai"]
+    path = ai
+    url = https://github.com/Luisotee/smolagents-ai-boilerplate
+[submodule "clients"]
+    path = clients
+    url = https://github.com/Luisotee/llm-clients-boilerplate

@@ -7,11 +7,21 @@
     "start:whatsapp": "cd clients/whatsapp && npm run start",
     "dev:ai": "cd ai && poetry run uvicorn ai_assistant.main:app --reload --host 0.0.0.0 --port 40000",
     "dev:whatsapp": "cd clients/whatsapp && npm run dev",
-    "setup": "npm run setup:ai && npm run setup:whatsapp",
+    "setup": "npm run setup:submodules && npm run setup:ai && npm run setup:whatsapp",
+    "setup:submodules": "git submodule update --init --recursive",
+    "update:submodules": "git submodule update --remote",
     "setup:ai": "cd ai && poetry install",
     "setup:whatsapp": "cd clients/whatsapp && npm install",
     "build:whatsapp": "cd clients/whatsapp && npm run build"
   },
   "author": "",
-  "license": "MIT"
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YOUR_USERNAME/ai-assistant-boilerplate.git"
+  },
+  "submodules": {
+    "ai": "https://github.com/Luisotee/smolagents-ai-boilerplate",
+    "clients": "https://github.com/Luisotee/llm-clients-boilerplate"
+  }
 }
