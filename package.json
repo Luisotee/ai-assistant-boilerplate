@@ -1,0 +1,17 @@
+{
+  "name": "ai-assistant-boilerplate",
+  "version": "1.0.0",
+  "description": "Unified boilerplate for AI assistants with various client integrations",
+  "scripts": {
+    "start:ai": "cd ai && poetry run start",
+    "start:whatsapp": "cd clients/whatsapp && npm run start",
+    "dev:ai": "cd ai && poetry run uvicorn ai_assistant.main:app --reload --host 0.0.0.0 --port 40000",
+    "dev:whatsapp": "cd clients/whatsapp && npm run dev",
+    "setup": "npm run setup:ai && npm run setup:whatsapp",
+    "setup:ai": "cd ai && poetry install",
+    "setup:whatsapp": "cd clients/whatsapp && npm install",
+    "build:whatsapp": "cd clients/whatsapp && npm run build"
+  },
+  "author": "",
+  "license": "MIT"
+}
